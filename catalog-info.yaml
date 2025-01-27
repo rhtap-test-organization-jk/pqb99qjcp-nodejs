@@ -1,0 +1,23 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: pqb99qjcp-nodejs 
+  description: Secure Supply Chain Example for Node.js+Express REST API with advanced continuous integration pipeline covering building, CVE scanning, security scanning, signatures,  attestations, SLSA provenance and SBOM along with Gitops-based continuous deployment   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:
+    # ArgoCD apps from this template used rhtap-gitops as the grouping
+    argocd/app-selector: rhtap/gitops=pqb99qjcp-nodejs
+    backstage.io/kubernetes-id: pqb99qjcp-nodejs 
+    backstage.io/techdocs-ref: dir:. 
+    jenkins.io/job-full-name: pqb99qjcp-nodejs
+    quay.io/repository-slug: rhtap-test-organization-jk/rhtap-qe
+  tags: ["nodejs", "express", "ubi8", "sscs", "sbom", "acs"] 
+spec:
+  type: service
+  owner: user:guest 
+  lifecycle: experimental
+ 
